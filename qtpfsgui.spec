@@ -1,4 +1,5 @@
 Summary:	QtPFSGui - HDR Image compositor
+Summary(pl):	QtPFSGui - narzêdzie do sk³adania obrazów HDR
 Name:		qtpfsgui
 Version:	1.5
 Release:	1
@@ -8,11 +9,15 @@ Source0:	http://dl.sourceforge.net/qtpfsgui/%{name}-%{version}.tar.gz
 # Source0-md5:	503202f36ec312b67db379edb1f1a7f7
 URL:		http://qtpfsgui.sourceforge.net/
 BuildRequires:	QtGui-devel
-BuildRequires:	qt4-qmake
 BuildRequires:	OpenEXR-devel
+BuildRequires:	qt4-qmake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
+QtPFSGui - HDR Image compositor.
+
+%description -l pl
+QtPFSGui - narzêdzie do sk³adania obrazów HDR.
 
 %prep
 %setup -q
@@ -23,7 +28,6 @@ qt4-qmake -after target.path=/usr/bin
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_applnkdir}/System,%{_pixmapsdir}}
 
 %{__make} install \
 	INSTALL_ROOT=$RPM_BUILD_ROOT
