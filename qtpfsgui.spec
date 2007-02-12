@@ -1,5 +1,5 @@
 Summary:	QtPFSGui - HDR Image compositor
-Summary(pl):	QtPFSGui - narzêdzie do sk³adania obrazów HDR
+Summary(pl.UTF-8):   QtPFSGui - narzÄ™dzie do skÅ‚adania obrazÃ³w HDR
 Name:		qtpfsgui
 Version:	1.5
 Release:	1
@@ -16,8 +16,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 QtPFSGui - HDR Image compositor.
 
-%description -l pl
-QtPFSGui - narzêdzie do sk³adania obrazów HDR.
+%description -l pl.UTF-8
+QtPFSGui - narzÄ™dzie do skÅ‚adania obrazÃ³w HDR.
 
 %prep
 %setup -q
