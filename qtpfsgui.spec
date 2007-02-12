@@ -1,5 +1,5 @@
 Summary:	QtPFSGui - HDR Image compositor
-Summary(pl.UTF-8):   QtPFSGui - narzędzie do składania obrazów HDR
+Summary(pl.UTF-8):	QtPFSGui - narzędzie do składania obrazów HDR
 Name:		qtpfsgui
 Version:	1.5
 Release:	1
