@@ -10,8 +10,8 @@ Source0:	http://dl.sourceforge.net/qtpfsgui/%{name}-%{version}.tgz
 URL:		http://qtpfsgui.sourceforge.net/
 BuildRequires:	QtGui-devel
 BuildRequires:	OpenEXR-devel
-BuildRequires:	qt4-qmake
 BuildRequires:	fftw3-single-devel
+BuildRequires:	qt4-qmake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
