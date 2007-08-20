@@ -8,9 +8,8 @@ Version:	1.8.12
 Release:	0.1
 License:	GPL
 Group:		X11/Applications
-Source0:	http://downloads.sourceforge.net/qtpfsgui/%{name}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/qtpfsgui/%{name}-%{version}.tar.gz
 # Source0-md5:	3a730548a681a20a43fffff68fdd46c3
-#Source0:	http://dl.sourceforge.net/qtpfsgui/%{name}-%{version}.tgz
 URL:		http://qtpfsgui.sourceforge.net/
 BuildRequires:	QtGui-devel
 BuildRequires:	OpenEXR-devel
