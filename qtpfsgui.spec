@@ -13,6 +13,7 @@ Source0:	http://dl.sourceforge.net/qtpfsgui/%{name}-%{version}.tar.gz
 URL:		http://qtpfsgui.sourceforge.net/
 BuildRequires:	QtGui-devel
 BuildRequires:	OpenEXR-devel
+BuildRequires:	exiv2-devel
 BuildRequires:	fftw3-single-devel
 BuildRequires:	qt4-build
 BuildRequires:	qt4-qmake
