@@ -15,8 +15,8 @@ BuildRequires:	QtGui-devel
 BuildRequires:	OpenEXR-devel
 BuildRequires:	exiv2-devel
 BuildRequires:	fftw3-single-devel
-BuildRequires:	qt4-build
-BuildRequires:	qt4-qmake
+BuildRequires:	qt4-build >= 4.3.3-3
+BuildRequires:	qt4-qmake >= 4.3.3-3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -29,7 +29,7 @@ QtPFSGui - narzędzie do składania obrazów HDR.
 %setup -q
 
 %build
-qt4-qmake -after target.path=/usr/bin 
+qmake-qt4 -after target.path=/usr/bin 
 %{__make}
 
 %install
