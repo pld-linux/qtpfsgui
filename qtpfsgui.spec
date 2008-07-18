@@ -5,7 +5,7 @@ Summary:	QtPFSGui - HDR Image compositor
 Summary(pl.UTF-8):	QtPFSGui - narzędzie do składania obrazów HDR
 Name:		qtpfsgui
 Version:	1.8.12
-Release:	0.1
+Release:	0.2
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/qtpfsgui/%{name}-%{version}.tar.gz
