@@ -49,4 +49,4 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_desktopdir}/qtpfsgui.desktop
 %{_iconsdir}/hicolor/48x48/apps/qtpfsgui.png
-%{_datadir}/%{name}/html
+%{_datadir}/%{name}
