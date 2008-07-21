@@ -10,6 +10,7 @@ License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/qtpfsgui/%{name}-%{version}.tar.gz
 # Source0-md5:	3a730548a681a20a43fffff68fdd46c3
+Patch0:		%{name}-gcc43.patch
 URL:		http://qtpfsgui.sourceforge.net/
 BuildRequires:	QtGui-devel
 BuildRequires:	OpenEXR-devel
@@ -28,6 +29,7 @@ QtPFSGui - narzędzie do składania obrazów HDR.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
 qmake-qt4 -after target.path=/usr/bin 
