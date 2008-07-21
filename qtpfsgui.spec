@@ -1,11 +1,9 @@
 #
-# TODO: - package missing files
-#
 Summary:	QtPFSGui - HDR Image compositor
 Summary(pl.UTF-8):	QtPFSGui - narzędzie do składania obrazów HDR
 Name:		qtpfsgui
 Version:	1.8.12
-Release:	0.2
+Release:	0.3
 License:	GPL
 Group:		X11/Applications
 Source0:	http://dl.sourceforge.net/qtpfsgui/%{name}-%{version}.tar.gz
@@ -32,7 +30,7 @@ QtPFSGui - narzędzie do składania obrazów HDR.
 %patch0 -p1
 
 %build
-qmake-qt4 -after target.path=/usr/bin 
+qmake-qt4 PREFIX=%{_prefix}
 %{__make}
 
 %install
@@ -40,10 +38,15 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	INSTALL_ROOT=$RPM_BUILD_ROOT
+%{__rm} $RPM_BUILD_ROOT%{_datadir}/%{name}/{AUTHORS,COPYING,Changelog,INSTALL,README}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc Changelog README TODO
 %attr(755,root,root) %{_bindir}/*
+%{_desktopdir}/qtpfsgui.desktop
+%{_iconsdir}/hicolor/48x48/apps/qtpfsgui.png
+%{_datadir}/%{name}/html
