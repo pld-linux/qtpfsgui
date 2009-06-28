@@ -28,6 +28,8 @@ QtPFSGui - narzędzie do składania obrazów HDR.
 %prep
 %setup -q
 
+sed -i -e '/^QMAKE_CXXFLAGS += / s/-msse2/%{rpmcflags}/' project.pro
+
 %build
 qmake-qt4 PREFIX=%{_prefix}
 %{__make}
