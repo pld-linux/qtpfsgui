@@ -31,16 +31,16 @@ QtPFSGui - narzędzie do składania obrazów HDR.
 %build
 qmake-qt4 PREFIX=%{_prefix}
 %{__make}
+lrelease project.pro
 
 %install
 rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_datadir}/%{name}/i18n
 
-lrelease project.pro
 %{__make} install \
 	INSTALL_ROOT=$RPM_BUILD_ROOT
 %{__rm} $RPM_BUILD_ROOT%{_datadir}/%{name}/{AUTHORS,Changelog,INSTALL,LICENSE,README}
 
-install -d $RPM_BUILD_ROOT%{_datadir}/%{name}/i18n
 cp -f i18n/lang_*.qm $RPM_BUILD_ROOT%{_datadir}/%{name}/i18n
 
 %clean
@@ -52,7 +52,9 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_desktopdir}/%{name}.desktop
 %{_iconsdir}/hicolor/32x32/apps/qtpfsgui.png
-%{_datadir}/%{name}
+%dir %{_datadir}/%{name}
+%{_datadir}/%{name}/html
+%dir %{_datadir}/%{name}/i18n
 %lang(cs) %{_datadir}/%{name}/i18n/lang_cs.qm
 %lang(de) %{_datadir}/%{name}/i18n/lang_de.qm
 %lang(es) %{_datadir}/%{name}/i18n/lang_es.qm
