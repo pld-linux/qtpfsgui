@@ -13,6 +13,7 @@ BuildRequires:	OpenEXR-devel
 BuildRequires:	QtGui-devel
 BuildRequires:	exiv2-devel
 BuildRequires:	fftw3-single-devel
+BuildRequires:	libgomp-devel
 BuildRequires:	libtiff-devel
 BuildRequires:	qt-linguist
 BuildRequires:	qt4-build >= 4.3.3-3
